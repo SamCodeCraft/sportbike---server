@@ -101,6 +101,7 @@ def create_app():
         if user and user.check_password(data['password']):
             return jsonify({'message': 'Login successful'}), 200
         return jsonify({'message': 'Invalid credentials'}), 401
+    
 
     @app.route('/auth/register', methods=['POST'])
     def register():
